@@ -9,7 +9,7 @@ const SideBar = ({zoomLevel, setZoomLevel}) => {
             <Flex bg='#b31e07' boxShadow='lg' w='100%' h='100px' alignItems='center'>
                 <Text ml='15px' color='white' fontSize='25' fontWeight='bold'>Interactive Map Demo</Text>
             </Flex>
-          <Flex w='100%' h='20px' flexDir='row' alignItems='center' py='30px'  px='30px'>
+          <Flex w='100%' h='20px' flexDir='row' alignItems='center' pt='40px'  px='20px'>
             <Text mr='15px' pb='2px' fontWeight='500' fontSize={18}>Zoom</Text>
             <CalciteSlider
                 min="7"
@@ -21,8 +21,15 @@ const SideBar = ({zoomLevel, setZoomLevel}) => {
             />
             <CalciteButton onClick={(e) => setZoomLevel(7)}>Reset</CalciteButton>
           </Flex>
-            <Flex flexDir='column' justifyContent='space-evenly' alignItems='center' w='100%' minH='100px'>
-
+            <Flex flexDir='column' justifyContent='space-evenly' w='100%' px='20px' mt='40px'>
+                <Flex flexDir='row'>
+                <Text fontWeight='500' mr='10px'>View the code: </Text>
+                <a href="https://github.com/Snergdafer/interactive-map-demo" style={{color: '#3366CC'}}>Repo Link</a>
+                </Flex>
+                <Text mt='20px'>
+                    This project was built to demonstrate the usage of the 
+                    ArchGIS Javascript API and a couple of Calcite Components.
+                </Text>
             </Flex>
         </Flex>
     )
