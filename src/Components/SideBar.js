@@ -1,12 +1,12 @@
 import React from 'react'
-import { Flex, Text } from '@chakra-ui/react';
+import { Flex, Text, Box } from '@chakra-ui/react';
 import { CalciteButton, CalciteSlider } from "@esri/calcite-components-react";
 
 const SideBar = ({zoomLevel, setZoomLevel}) => { 
 
     return (
         <Flex flexDirection='column' w='400px'>
-            <Flex bg='#b31e07' boxShadow='lg' w='100%' h='100px' alignItems='center'>
+            <Flex bgGradient='linear(to-t, #5402f7, #094dd6)' boxShadow='lg' w='100%' h='100px' alignItems='center'>
                 <Text ml='15px' color='white' fontSize='25' fontWeight='bold'>Interactive Map Demo</Text>
             </Flex>
           <Flex w='100%' h='20px' flexDir='row' alignItems='center' pt='40px'  px='20px'>
@@ -22,6 +22,7 @@ const SideBar = ({zoomLevel, setZoomLevel}) => {
             <CalciteButton onClick={(e) => setZoomLevel(7)}>Reset</CalciteButton>
           </Flex>
             <Flex flexDir='column' justifyContent='space-evenly' w='100%' px='20px' mt='40px'>
+                <Box borderBottomWidth='1px' borderBottomColor='lightgray' mb='20px'/>
                 <Flex flexDir='row'>
                 <Text fontWeight='500' mr='10px'>View the code: </Text>
                 <a href="https://github.com/Snergdafer/interactive-map-demo" style={{color: '#3366CC'}}>Repo Link</a>
