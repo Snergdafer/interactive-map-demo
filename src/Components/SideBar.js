@@ -15,14 +15,14 @@ const SideBar = ({handleNavigationPress, mapVisible}) => {
           </Flex>
             <Flex flexDir='column'  w='100%' px='20px'h='100%'>
                 <Box borderBottomWidth='1px' borderBottomColor='lightgray' mb='20px'/>
-               {mapVisible ? ( <Text>
+               {mapVisible ? ( <Text color='white'>
                     This project was built to demonstrate the usage of the 
                     ArchGIS Javascript API and a couple of Calcite Components.
                 </Text>) :
                 (
                     <Flex justifyContent='flex-end' px='20px' flexDir='column' h='100%' mb='25px'>
-                        <Text>Shoot me an email at:</Text>
-                        <Text>jesse.etherington@gmail.com</Text>
+                        <Text color='white'>Shoot me an email at:</Text>
+                        <Text color='white'>jesse.etherington@gmail.com</Text>
                         <Flex justifyContent='space-evenly' mt='20px'>
                    <SocialIcon url='https://www.linkedin.com/in/jesse-etherington/'/> 
                    <SocialIcon url='https://github.com/Snergdafer'/>

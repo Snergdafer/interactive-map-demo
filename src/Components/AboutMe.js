@@ -8,7 +8,7 @@ const AboutMe = () => {
     <Flex w="100%" >
       <Flex flexDir="column" w="100%" pt="60px">
         <Flex mr="650px" justifyContent="center">
-          <Text fontSize="18px" fontWeight="500">
+          <Text fontSize="18px" fontWeight="500" color='white'>
             Hello I'm
           </Text>
         </Flex>
@@ -32,7 +32,7 @@ const AboutMe = () => {
           </Flex>
         </Flex>
         <Flex justifyContent="center" ml="450px">
-          <Text fontSize="20px" fontWeight="500">
+          <Text fontSize="20px" fontWeight="500" color='white'>
             Mobile Application and Web Engineer
           </Text>
         </Flex>
@@ -40,7 +40,7 @@ const AboutMe = () => {
     </Flex>
     <Box h='2px' borderRadius='2px' w='60%' bgColor='#f7e3cb' mt='100px'/>
     <Flex mt='110px' px='100px'>
-        <Text>
+        <Text color='white'>
             I've spent the last several years developing systems in Block Chain and Crypto.
             This experience has opened my eyes to the pace at which new technologies grow and adapt to market needs.
             I'm exited to grow into my next role as a Mid Level Developer!
