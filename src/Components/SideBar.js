@@ -1,36 +1,34 @@
 import React from 'react'
-import { Flex, Text, Box } from '@chakra-ui/react';
-import { CalciteButton, CalciteSlider } from "@esri/calcite-components-react";
+import { Flex, Text, Box, Button } from '@chakra-ui/react';
+import { SocialIcon } from 'react-social-icons'
 
-const SideBar = ({zoomLevel, setZoomLevel}) => { 
+const SideBar = ({handleNavigationPress, mapVisible}) => { 
 
     return (
-        <Flex flexDirection='column' w='400px'>
-            <Flex bgGradient='linear(to-t, #5402f7, #094dd6)' boxShadow='lg' w='100%' h='100px' alignItems='center'>
-                <Text ml='15px' color='white' fontSize='25' fontWeight='bold'>Interactive Map Demo</Text>
+        <Flex flexDirection='column' w='400px' bgColor='#383847' h='100%'>
+            <Flex boxShadow='lg' w='100%' h='100px' alignItems='center' justifyContent='center' bgGradient='linear(to-t, #5402f7, #094dd6)'>
+                <Text ml='15px' color='white' fontSize='25' fontWeight='bold'>My Portfolio</Text>
             </Flex>
-          <Flex w='100%' h='20px' flexDir='row' alignItems='center' pt='40px'  px='20px'>
-            <Text mr='15px' pb='2px' fontWeight='500' fontSize={18}>Zoom</Text>
-            <CalciteSlider
-                min="7"
-                max="19"
-                value={zoomLevel}
-                step="1"
-                onCalciteSliderInput={(e) => setZoomLevel(e.target.value)}
-                style={{ width: '100%' }}
-            />
-            <CalciteButton onClick={(e) => setZoomLevel(7)}>Reset</CalciteButton>
+          <Flex w='100%'  flexDir='column' alignItems='center' py='10px'  px='20px' h='200px'>
+          <Button onClick={() => handleNavigationPress('about')} p='15px' w='120px' mt='15px'>About</Button>
+            <Button onClick={() => handleNavigationPress('map')} p='15px' w='120px' mt='15px'>Map</Button>
           </Flex>
-            <Flex flexDir='column' justifyContent='space-evenly' w='100%' px='20px' mt='40px'>
+            <Flex flexDir='column'  w='100%' px='20px'h='100%'>
                 <Box borderBottomWidth='1px' borderBottomColor='lightgray' mb='20px'/>
-                <Flex flexDir='row'>
-                <Text fontWeight='500' mr='10px'>View the code: </Text>
-                <a href="https://github.com/Snergdafer/interactive-map-demo" style={{color: '#3366CC'}}>Repo Link</a>
-                </Flex>
-                <Text mt='20px'>
+               {mapVisible ? ( <Text>
                     This project was built to demonstrate the usage of the 
                     ArchGIS Javascript API and a couple of Calcite Components.
-                </Text>
+                </Text>) :
+                (
+                    <Flex justifyContent='flex-end' px='20px' flexDir='column' h='100%' mb='25px'>
+                        <Text>Shoot me an email at:</Text>
+                        <Text>jesse.etherington@gmail.com</Text>
+                        <Flex justifyContent='space-evenly' mt='20px'>
+                   <SocialIcon url='https://www.linkedin.com/in/jesse-etherington/'/> 
+                   <SocialIcon url='https://github.com/Snergdafer'/>
+                        </Flex>
+                    </Flex>
+                )}
             </Flex>
         </Flex>
     )
