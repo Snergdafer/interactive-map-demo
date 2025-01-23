@@ -3,7 +3,7 @@ import { Box, Flex, Text } from "@chakra-ui/react"
 
 const AboutMe = () => {
   return (
-    <Flex w='100%' h='100%' bgGradient='linear(to-tl, #1d1db3, #202042)' flexDir='column'>
+    <Flex w='100%' h='100%' bgColor='#4C4B63' flexDir='column'>
 
     <Flex w="100%" >
       <Flex flexDir="column" w="100%" pt="60px">
