@@ -22,10 +22,12 @@ const SideBar = ({handleNavigationPress, mapVisible}) => {
                 (
                     <Flex justifyContent='flex-end' px='20px' flexDir='column' h='100%' mb='25px'>
                         <Text color='white'>Shoot me an email at:</Text>
-                        <Text color='white'>jesse.etherington@gmail.com</Text>
+                        <Text color='white'>
+                            <a href='mailto:jesse.etherington@gmail.com'>jesse.etherington@gmail.com</a>
+                        </Text>
                         <Flex justifyContent='space-evenly' mt='20px'>
-                   <SocialIcon url='https://www.linkedin.com/in/jesse-etherington/'/> 
-                   <SocialIcon url='https://github.com/Snergdafer'/>
+                            <SocialIcon url='https://www.linkedin.com/in/jesse-etherington/'/> 
+                            <SocialIcon url='https://github.com/Snergdafer'/>
                         </Flex>
                     </Flex>
                 )}

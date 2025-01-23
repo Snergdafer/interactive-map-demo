@@ -7,7 +7,7 @@ const AboutMe = () => {
 
     <Flex w="100%" >
       <Flex flexDir="column" w="100%" pt="60px">
-        <Flex mr="650px" justifyContent="center">
+        <Flex  justifyContent="center">
           <Text fontSize="18px" fontWeight="500" color='white'>
             Hello I'm
           </Text>
@@ -31,19 +31,17 @@ const AboutMe = () => {
             </Text>
           </Flex>
         </Flex>
-        <Flex justifyContent="center" ml="450px">
+        <Flex justifyContent="center" >
           <Text fontSize="20px" fontWeight="500" color='white'>
-            Mobile Application and Web Engineer
+            React and React Native Engineer
           </Text>
         </Flex>
       </Flex>
     </Flex>
-    <Box h='2px' borderRadius='2px' w='60%' bgColor='#f7e3cb' mt='100px'/>
-    <Flex mt='110px' px='100px'>
-        <Text color='white'>
-            I've spent the last several years developing systems in Block Chain and Crypto.
-            This experience has opened my eyes to the pace at which new technologies grow and adapt to market needs.
-            I'm exited to grow into my next role as a Mid Level Developer!
+    <Box h='2px' borderRadius='2px' w='95%' alignSelf='center' bgColor='#f7e3cb' mt='100px'/>
+    <Flex mt='110px' px='100px' alignSelf='center'>
+        <Text color='white' w='500px'>
+        I have 3 years of in-house and remote experience coding for projects ranging from Proprietary Sales Apps to Cryptocurrency DApps. I bring my love of gaming, music, and ideation to my work. I’m also passionate about the outdoors, spending lots of time at my family’s cabin.
         </Text>
     </Flex>
     </Flex>
