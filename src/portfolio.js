@@ -9,7 +9,7 @@ const about = {
   name: 'Jesse Etherington',
   role: 'Mobile Engineer',
   description:
-    "This experience has opened my eyes to the pace at which new technologies grow and adapt to market needs. I'm exited to grow into my next role as a Mid Level Developer",
+    "I have 3 years of in-house and remote experience coding for projects ranging from Proprietary Sales Apps to Cryptocurrency DApps. I bring my love of gaming, music, and ideation to my work. I’m also passionate about the outdoors, spending lots of time at my family’s cabin.",
   resume: 'https://example.com',
   social: {
     linkedin: 'https://linkedin.com',
@@ -32,7 +32,7 @@ const projects = [
     description:
       'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
     stack: ['Javascript', 'ArcGis', 'React'],
-    livePreview: 'https://github.com',
+    livePreview: '#map',
   }
 ]
 

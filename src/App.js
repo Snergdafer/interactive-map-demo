@@ -1,5 +1,6 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { ThemeContext } from './contexts/theme'
+import { StateContext } from './contexts/appState'
 import Header from './components/Header/Header'
 import About from './components/About/About'
 import Projects from './components/Projects/Projects'
@@ -12,19 +13,22 @@ import './App.css'
 
 const App = () => {
   const [{ themeName }] = useContext(ThemeContext)
+  const [{ isMap }] = useContext(StateContext)
 
   return (
     <div id='top' className={`${themeName} app`}>
       <Header />
 
-      <main>
+        <main>
         <About />
+      {!isMap ? 
         <Projects />
+        :
+        <MapContainer/>}
         <Skills />
         <Contact />
-        <MapContainer/>
-      </main>
-
+        </main>
+      
       <ScrollToTop />
       <Footer />
     </div>
