@@ -19,26 +19,13 @@ function App() {
   };
 
   return (
-    <Flex h="1200px" bgColor='#4C4B63'>
+    <Flex h="100vh">
       <SideBar
         handleNavigationPress={handleNavigationPress}
         mapVisible={mapVisible}
       />
-      <div style={{width: '430px'}}/>
         <Box w='100%' h='100%'>
-          {
-            mapVisible ? 
-              (
-                <MapDisplay />
-              ) 
-            : 
-            (
-                <AboutMe 
-                  handleNavigationPress={handleNavigationPress}
-                  mapVisible={mapVisible} 
-                />
-              )
-          }
+          {mapVisible ? (<MapDisplay />) : (<AboutMe />)}
         </Box>
     </Flex>
   );
