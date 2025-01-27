@@ -8,7 +8,7 @@ import esriConfig from "@arcgis/core/config.js";
 const key = process.env.REACT_APP_ESRI_API_KEY;
 
 const MapDisplay = ({}) => {
-
+  console.log(key)
   const mapRef = useRef();
   const [view, setView] = useState(null);
 
@@ -33,41 +33,41 @@ const MapDisplay = ({}) => {
       title: "Creature Habitat",
       content: "White-Tailed Dove",
     };
-    const WhiteDoveGeojsonlayer = new GeoJSONLayer({
-      url: "https://services.arcgis.com/ZzrwjTRez6FJiOq4/arcgis/rest/services/Utah_Whitewinged_Dove_Habitat/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson",
-      title: "White Doves Habitat",
-      popupTemplate: WhiteDoveTemplate,
-    });
-    WhiteDoveGeojsonlayer.renderer = {
-      type: "simple",
-      symbol: {
-        type: "simple-fill",
-        color: "green",
-        outline: {
-          color: "black",
-          width: 1,
-        },
-      },
-    };
-    map.add(WhiteDoveGeojsonlayer);
-    const WeatherStationTemplate = {
-      title: "Weather Station",
-      content: "{STATION_NA}, {COUNTY}",
-    };
-    const WeatherStationGeojsonlayer = new GeoJSONLayer({
-      url: "https://services1.arcgis.com/99lidPhWCzftIe9K/arcgis/rest/services/WeatherStations/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson",
-      title: "Weather Stations",
-      popupTemplate: WeatherStationTemplate,
-    });
-    WeatherStationGeojsonlayer.renderer = {
-      type: "simple",
-      symbol: {
-        type: "simple-marker",
-        color: "blue",
-        size: 5,
-      },
-    };
-    map.add(WeatherStationGeojsonlayer);
+    // const WhiteDoveGeojsonlayer = new GeoJSONLayer({
+    //   url: "https://services.arcgis.com/ZzrwjTRez6FJiOq4/arcgis/rest/services/Utah_Whitewinged_Dove_Habitat/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson",
+    //   title: "White Doves Habitat",
+    //   popupTemplate: WhiteDoveTemplate,
+    // });
+    // WhiteDoveGeojsonlayer.renderer = {
+    //   type: "simple",
+    //   symbol: {
+    //     type: "simple-fill",
+    //     color: "green",
+    //     outline: {
+    //       color: "black",
+    //       width: 1,
+    //     },
+    //   },
+    // };
+    // map.add(WhiteDoveGeojsonlayer);
+    // const WeatherStationTemplate = {
+    //   title: "Weather Station",
+    //   content: "{STATION_NA}, {COUNTY}",
+    // };
+    // const WeatherStationGeojsonlayer = new GeoJSONLayer({
+    //   url: "https://services1.arcgis.com/99lidPhWCzftIe9K/arcgis/rest/services/WeatherStations/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson",
+    //   title: "Weather Stations",
+    //   popupTemplate: WeatherStationTemplate,
+    // });
+    // WeatherStationGeojsonlayer.renderer = {
+    //   type: "simple",
+    //   symbol: {
+    //     type: "simple-marker",
+    //     color: "blue",
+    //     size: 5,
+    //   },
+    // };
+    // map.add(WeatherStationGeojsonlayer);
     const view = new MapView({
       map: map,
       center: [-111.93659193092192, 39.5], // Longitude, latitude

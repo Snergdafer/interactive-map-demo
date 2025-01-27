@@ -1,34 +1,35 @@
-import "./App.css";
-import MapDisplay from "./Components/Map";
-import { useState } from "react";
-import { Box, Flex } from "@chakra-ui/react";
-import "@esri/calcite-components/dist/calcite/calcite.css";
-import SideBar from "./Components/SideBar";
+import { useContext, useEffect } from 'react'
+import { ThemeContext } from './contexts/theme'
+import { StateContext } from './contexts/appState'
+import Header from './components/Header/Header'
+import About from './components/About/About'
+import Projects from './components/Projects/Projects'
+import Skills from './components/Skills/Skills'
+import ScrollToTop from './components/ScrollToTop/ScrollToTop'
+import Contact from './components/Contact/Contact'
+import Footer from './components/Footer/Footer'
+import MapContainer from './components/Map/MapContainer'
+import './App.css'
 
-import AboutMe from "./Components/AboutMe";
-
-function App() {
-  const [mapVisible, setMapVisible] = useState(false);
-
-  const handleNavigationPress = (route) => {
-    if (route === "map") {
-      setMapVisible(true);
-    } else {
-      setMapVisible(false);
-    }
-  };
+const App = () => {
+  const [{ themeName }] = useContext(ThemeContext)
+  const [{ isMap }] = useContext(StateContext)
 
   return (
-    <Flex h="100vh">
-      <SideBar
-        handleNavigationPress={handleNavigationPress}
-        mapVisible={mapVisible}
-      />
-        <Box w='100%' h='100%'>
-          {mapVisible ? (<MapDisplay />) : (<AboutMe />)}
-        </Box>
-    </Flex>
-  );
+    <div id='top' className={`${themeName} app`}>
+      <Header />
+
+        <main>
+        <About />
+        <Projects />
+        <Skills />
+        <Contact />
+        </main>
+      
+      <ScrollToTop />
+      <Footer />
+    </div>
+  )
 }
 
-export default App;
+export default App
