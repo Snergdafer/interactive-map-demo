@@ -9,7 +9,7 @@ const Header = () => {
     <header className='header center'>
       <h3>
         {homepage ? (
-          <div className='link'>
+          <div className='linkInactive'>
             {title}
           </div>
         ) : (

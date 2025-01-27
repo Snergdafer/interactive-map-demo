@@ -9,7 +9,7 @@ const about = {
   name: 'Jesse Etherington',
   role: 'Mobile Engineer',
   description:
-    "I have 3 years of in-house and remote experience coding for projects ranging from Proprietary Sales Apps to Cryptocurrency DApps. I bring my love of gaming, music, and ideation to my work. I’m also passionate about the outdoors, spending lots of time at my family’s cabin.",
+    "I have 3 years of in-office and remote experience coding for projects ranging from Proprietary Sales Apps to Cryptocurrency DApps. I bring my love of gaming, music, and ideation to my work. I’m also passionate about the outdoors, spending lots of time at my family’s cabin.",
   resume: 'https://example.com',
   social: {
     linkedin: 'https://linkedin.com',
@@ -23,16 +23,23 @@ const projects = [
   {
     name: 'C# Calculator',
     description:
-      'A simple calculator I built in .Net Maui to demonstrate my C# Skills',
+      'A simple calculator I built in .Net Maui to demonstrate my C# Skills.',
     stack: ['C#', 'XAML', 'Maui'],
     livePreview: 'https://github.com/Snergdafer/calculator'
   },
   {
-    name: 'ArcGis Map Demo',
+    name: 'Albatross',
     description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['Javascript', 'ArcGis', 'React'],
-    livePreview: '#map',
+      'An app used internally by the sales team at Blue Raven Solar. Handled everything from customer contacts to Geolocation to complex forms.',
+    stack: ['React Native', 'Redux', 'Redux Saga'],
+    livePreview: '',
+  },
+  {
+    name: 'Sensory Staff',
+    description:
+      'A website made for breweries to manage their inventories and regulatory documents.',
+    stack: ['Inertia', 'Laravel', 'SQLite'],
+    livePreview: '',
   }
 ]
 

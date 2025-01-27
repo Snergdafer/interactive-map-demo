@@ -13,11 +13,15 @@
 
 .about__desc {
   font-size: 1rem;
-  max-width: 600px;
+  max-width: 700px;
 }
 
 .about__desc,
 .about__contact {
+  flex: 1;
+  flex-direction: row;
+  min-width: 250px;
+  justify-content: space-between;
   margin-top: 2.4em;
 }
 

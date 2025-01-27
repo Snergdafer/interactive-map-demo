@@ -21,10 +21,7 @@ const App = () => {
 
         <main>
         <About />
-      {!isMap ? 
         <Projects />
-        :
-        <MapContainer/>}
         <Skills />
         <Contact />
         </main>
