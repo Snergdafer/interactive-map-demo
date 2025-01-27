@@ -11,7 +11,7 @@ const ProjectContainer = ({ project }) => {
       <a
           href={project.livePreview}
           aria-label='live preview'
-          className='link link--icon'
+          className='link--icon'
         >
           <h3>{project.name}</h3>
 
