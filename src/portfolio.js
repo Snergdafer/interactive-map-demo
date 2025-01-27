@@ -30,7 +30,7 @@ const projects = [
   {
     name: 'Albatross',
     description:
-      'An app used internally by the sales team at Blue Raven Solar. Handled everything from customer contacts to Geolocation to complex forms.',
+      'An app used internally by the sales team at Blue Raven Solar. Handled everything from customer contacts to Geolocation to complex forms. (Link Unavailable)',
     stack: ['React Native', 'Redux', 'Redux Saga'],
     livePreview: '',
   },
