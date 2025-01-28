@@ -39,7 +39,7 @@ const projects = [
     description:
       'A website made for breweries to manage their inventories and regulatory documents.',
     stack: ['Inertia', 'Laravel', 'SQLite'],
-    livePreview: '',
+    livePreview: 'https://www.sensorystaff.com',
   }
 ]
 
